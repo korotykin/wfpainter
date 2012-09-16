@@ -1,0 +1,25 @@
+{
+ "manifest_version": 2,
+ "name": "workflowy painter",
+  "version": "2.0.1",
+  "description": "extension for workflowy.com. paint your list with four colors - red, blue, green, yellow.",
+  "background": {"scripts":["wfpbg.js"]},
+  "content_scripts": [
+    {
+      "matches": ["https://workflowy.com/", "http://workflowy.com/"],
+      "js": ["jquery-1.7.1.js", "wfpainter.js"]
+    }
+  ],
+  "icons": {
+    "16": "wfpainter16.png",
+    "48": "wfpainter48_1.png",
+    "128": "wfpainter128_1.png"
+  },
+  "page_action": {
+    "default_icon": "wfpainter19.png",
+    "default_title": "Workflowy painter",
+    "default_popup": "popup.html"
+  },
+  "permissions": ["tabs", "storage"],
+  "options_page": "popup.html"
+}
