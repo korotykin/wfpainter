@@ -1,13 +1,13 @@
 {
  "manifest_version": 2,
- "name": "workflowy painter",
-  "version": "2.0.1",
-  "description": "extension for workflowy.com. paint your list with four colors - red, blue, green, yellow.",
+ "name": "painter for workflowy.com",
+  "version": "2.1",
+  "description": "extension for workflowy.com. paint your list with 17 colors - red,blue,green,yellow,aqua,black,fuchsia,gray,lime,maroon,etc.",
   "background": {"scripts":["wfpbg.js"]},
   "content_scripts": [
     {
       "matches": ["https://workflowy.com/", "http://workflowy.com/"],
-      "js": ["jquery-1.7.1.js", "wfpainter.js"]
+      "js": ["jquery-2.0.0.min.js", "wfpainter.js"]
     }
   ],
   "icons": {
@@ -17,7 +17,7 @@
   },
   "page_action": {
     "default_icon": "wfpainter19.png",
-    "default_title": "Workflowy painter",
+    "default_title": "Painter for workflowy.com",
     "default_popup": "popup.html"
   },
   "permissions": ["tabs", "storage"],

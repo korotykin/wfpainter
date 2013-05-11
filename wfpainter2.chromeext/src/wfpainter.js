@@ -1,6 +1,6 @@
 
 (function($){
-    var arColors = ["red", "blue", "green", "yellow"];
+    var arColors = ["red", "blue", "green", "yellow", "aqua", "black", "fuchsia", "gray", "lime", "maroon", "navy", "olive", "orange", "purple", "silver", "teal", "white"];
     var mode = "color";
     var prev_mode = mode;
     var timerUpdateNodes;
@@ -15,7 +15,7 @@
             elsChange.css(mode, val);
             if ((mode == "background-color") && (val != "yellow")) elsChange.css("color", "white");
             elsChange.addClass(class_name);
-            $("." + class_name).not(els).removeClass(class_name).css(mode, "");
+            $("." + class_name).not(els).removeClass(class_name).css(mode, "").css("color", "");
         });
         clearInterval(timerUpdateNodes);
     };
